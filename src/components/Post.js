@@ -6,9 +6,9 @@ const Post = (props) => {
 
         <div>
            {props.posts.map(post =>
-            <li key={post.id}>
-                {`/posts/${post.id}`}>{post.title} {post.body}
-            </li>)}
+            <ul key={post.id}>
+                {post.title} {post.body} {/* {`/posts/${post.id}`} */}
+            </ul>)}
         </div>
 
     )

@@ -14,9 +14,8 @@ class PostsContainer extends React.Component {
     render() {
         return (
             <header className="App-header">
-                <Post posts={this.props.posts}/>
                 <PostForm/>
-                Feed goes here
+                <Post posts={this.props.posts}/>
             </header>
         )
 
