@@ -5,13 +5,14 @@ const Post = (props) => {
     return (
 
         <div>
-           Post 
+           {props.posts.map(post =>
+            <li key={post.id}>
+                {`/posts/${post.id}`}>{post.title} {post.body}
+            </li>)}
         </div>
 
     )
 
-
 }
-
 
 export default Post
