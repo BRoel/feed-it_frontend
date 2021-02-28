@@ -8,13 +8,13 @@ import PostForm from '../components/PostForm';
 class PostsContainer extends React.Component {
 
     componentDidMount() {
-        this.props.fetchPosts()
+        this.props.fetchPosts() //on mount fetching posts
     }
     
     render() {
         return (
             <header className="App-header">
-                <Post/>
+                <Post posts={this.props.posts}/>
                 <PostForm/>
                 Feed goes here
             </header>
@@ -26,7 +26,7 @@ class PostsContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-      posts: state.posts
+      posts: state.posts // posts can be accessed as props
     }
 }
 
