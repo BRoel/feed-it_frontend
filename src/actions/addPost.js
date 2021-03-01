@@ -11,11 +11,8 @@ export const addPost = (data) => {
         body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(post => dispatch({ //dispatched new POST to Postreducer
-            type: 'ADD_POST', 
-            payload: post
-        }))
-    
+        .then(post => dispatch({type: 'ADD_POST', payload: post}))
+        //dispatched new POST to Postreducer
     }
   
 }
