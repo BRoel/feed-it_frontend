@@ -14,12 +14,13 @@ class PostsContainer extends React.Component {
     
     render() {
         return (
+            <div>
             <header className="App-header">
-                    <Route path='/posts' render={(routerProps) => <Posts {...routerProps} posts={this.props.post}/>}/>
-                    <Route path='/posts/new' component={PostForm}/>
-                    <Route path='/posts/:id' render={(routerProps) => <Post {...routerProps} posts={this.props.accounts}/>}/>
-
+                <Route path='/posts/new' component={PostForm}/>
+                <Route path='/posts/:id' render={(routerProps) => <Post {...routerProps} posts={this.props.posts}/>}/>
+                <Route path='/posts' render={(routerProps) => <Posts {...routerProps} posts={this.props.post}/>}/>
             </header>
+            </div>
         )
 
     }

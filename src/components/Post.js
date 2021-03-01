@@ -1,14 +1,16 @@
-import React from 'react';
+import React from 'react'
 import {Redirect} from 'react-router-dom'
 
 const Post = (props) => {
+    
+    console.log(props)
 
-    let post = props.posts[props.match.params.id - 1]
-
+    // let post = props.posts[props.match.params.id]
+    // console.log(post)
     return (
-        <div>
-            {post ? post.title : null} - {post ? post.body : null}
-        </div>
+        <li>
+            {/* {post ? post.title : null} {post ? post.body : null} */}
+        </li>
     )
 
 }
