@@ -1,16 +1,14 @@
-import React from 'react'
+import React from 'react';
+import {Redirect} from 'react-router-dom'
 
 const Post = (props) => {
 
+    let post = props.posts[props.match.params.id - 1]
+
     return (
-
         <div>
-           {props.posts.map(post =>
-            <ul key={post.id}>
-                {post.title} {post.body} {/* {`/posts/${post.id}`} */}
-            </ul>)}
+            {post ? post.title : null} - {post ? post.body : null}
         </div>
-
     )
 
 }

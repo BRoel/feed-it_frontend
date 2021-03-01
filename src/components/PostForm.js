@@ -20,7 +20,7 @@ class PostForm extends React.Component {
         e.preventDefault()
         this.props.addPost(this.state) //dispatch to reducer
         this.setState({
-            title: '',
+            title: '', //clears form after submit
             body: ''
         })
     }

@@ -1,9 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
 import {fetchPosts} from '../actions/fetchPosts';
-import Post from '../components/Post';
+import Posts from '../components/Posts';
 import PostForm from '../components/PostForm';
+import Post from '../components/Post';
+import {Route, Switch} from 'react-router-dom'
 
 class PostsContainer extends React.Component {
 
@@ -14,8 +15,10 @@ class PostsContainer extends React.Component {
     render() {
         return (
             <header className="App-header">
-                <PostForm/>
-                <Post posts={this.props.posts}/>
+                    <Route path='/posts' render={(routerProps) => <Posts {...routerProps} posts={this.props.post}/>}/>
+                    <Route path='/posts/new' component={PostForm}/>
+                    <Route path='/posts/:id' render={(routerProps) => <Post {...routerProps} posts={this.props.accounts}/>}/>
+
             </header>
         )
 
