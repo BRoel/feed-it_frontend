@@ -1,5 +1,6 @@
 import React from 'react'
-
+import {connect} from 'react-redux'
+import {addPost} from '../actions/addPost'
 
 class PostForm extends React.Component {
 
@@ -11,7 +12,7 @@ class PostForm extends React.Component {
 
     handleChange = (e) => {
         this.setState({
-            [e.target.title]: e.target.value
+            [e.target.name]: e.target.value
         })
     }
 
@@ -42,4 +43,4 @@ class PostForm extends React.Component {
 }
 
 
-export default PostForm
+export default connect(null, {addPost})(PostForm)
