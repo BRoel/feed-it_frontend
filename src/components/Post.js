@@ -1,6 +1,7 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
 import {Card} from 'react-bootstrap';
+import CommentsContainer from '../containers/CommentsContainer';
 
 const Post = (props) => {
     
@@ -14,6 +15,7 @@ const Post = (props) => {
             
             <h1>{post ? post.title : null}</h1>
             <p>{post ? post.body : null}</p>
+            <p>CommentsContainer</p>
         
         </Card>
         //if Post exists then render, otherwise null

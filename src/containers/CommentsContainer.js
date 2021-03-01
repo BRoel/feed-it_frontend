@@ -10,7 +10,9 @@ class CommentsContainer extends React.Component {
 
     render() {
         return(
-
+            <div>
+                CommentsContainer
+            </div>
         )
     }
 
