@@ -10,15 +10,15 @@ class PostForm extends React.Component {
     }
     //local state
 
-    handleChange = (e) => {
+    handleChange = (e) => { //update state
         this.setState({
             [e.target.name]: e.target.value
         })
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = (e) => { //on form submit state sent to addPost action
         e.preventDefault()
-        this.props.addPost(this.state)
+        this.props.addPost(this.state) //dispatch to reducer
         this.setState({
             title: '',
             body: ''
@@ -43,4 +43,4 @@ class PostForm extends React.Component {
 }
 
 
-export default connect(null, {addPost})(PostForm)
+export default connect(null, {addPost})(PostForm) //allows for a call to this.props.addPost

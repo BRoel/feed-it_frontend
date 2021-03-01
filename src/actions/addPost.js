@@ -7,11 +7,11 @@ export const addPost = (data) => {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        method: 'POST',
+        method: 'POST',  // fetch POST to API adds new post
         body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(post => dispatch({
+        .then(post => dispatch({ //dispatched new POST to Postreducer
             type: 'ADD_POST', 
             payload: post
         }))
