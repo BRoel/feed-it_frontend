@@ -6,6 +6,7 @@ import {Provider} from 'react-redux'
 import postReducer from './reducers/postReducer'
 import {BrowserRouter as Router} from 'react-router-dom'
 
+
 import './index.css';
 import Header from "./Header";
 import App from './App';

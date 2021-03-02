@@ -5,6 +5,7 @@ import Posts from '../components/Posts';
 import PostForm from '../components/PostForm';
 import Post from '../components/Post';
 import {Route, Switch} from 'react-router-dom'
+import NavBar from '../components/NavBar'
 
 class PostsContainer extends React.Component {
 
@@ -16,6 +17,7 @@ class PostsContainer extends React.Component {
         return (
             <div>
                 <header className="App-header">
+                <NavBar/>
                     <Switch>
                         <Route path='/posts/new' component={PostForm}/>
                         <Route path='/posts/:id' render={(routerProps) => <Post {...routerProps} posts={this.props.posts}/>}/>
