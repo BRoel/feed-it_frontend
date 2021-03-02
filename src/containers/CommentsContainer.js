@@ -1,17 +1,16 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {fetchPosts} from '../actions/fetchPosts';
-import Posts from '../components/Posts';
-import PostForm from '../components/PostForm';
-import Post from '../components/Post';
-import {Route, Switch} from 'react-router-dom'
+import CommentForm from '../components/CommentForm';
+import Comments from '../components/Comments';
 
 class CommentsContainer extends React.Component {
 
     render() {
-        return(
+        return (
             <div>
-                CommentsContainer
+
+                <CommentForm post={this.props.post}/>
+                <Comments comments={this.props.post && this.props.post.comments}/>
+                
             </div>
         )
     }

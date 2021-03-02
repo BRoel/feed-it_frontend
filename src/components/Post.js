@@ -8,14 +8,14 @@ const Post = (props) => {
     console.log(props)
 
     let post = props.posts[props.match.params.id - 1]
-    console.log(post)
+    // console.log(post)
 
     return (
         <Card className='post card'>
             
             <h1>{post ? post.title : null}</h1>
             <p>{post ? post.body : null}</p>
-            <p>CommentsContainer</p>
+            <CommentsContainer post={post}/>
         
         </Card>
         //if Post exists then render, otherwise null
