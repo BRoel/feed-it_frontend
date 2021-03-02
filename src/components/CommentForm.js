@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
+import {addComment} from '../actions/addComment'
 
 class CommentForm extends React.Component {
 
@@ -16,20 +17,19 @@ class CommentForm extends React.Component {
 
     handleSubmit = (e) => { //on form submit state sent to addComment action
         e.preventDefault()
-        this.props.addPost(this.state) //dispatch to reducer
+        this.props.addComment(this.state, this.props.post.id) //dispatch to reducer
         this.setState({
-            title: '', //clears form after submit
-            body: ''
+            content: '' //clears form after submit
         })
     }
 
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Comment: </label>
-                    <textarea type='text' name='content' value={this.state.content} onChange={this.handleChange}/>
-                    <input type='submit'/>
+                    <input type='text' name='content' value={this.state.content} onChange={this.handleChange}/>
+                    <input type="submit"/>
                 </form>
             </div>
         )
@@ -38,4 +38,4 @@ class CommentForm extends React.Component {
 }
 
 
-export default connect(null)(CommentForm)
+export default connect(null, {addComment})(CommentForm) //on invoke update store

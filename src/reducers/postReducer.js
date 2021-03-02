@@ -9,8 +9,16 @@ export default function postReducer(state = {posts: []}, action) {
             return {
                 ...state, posts: [...state.posts, action.payload] // posts point to array with all other existing posts along with new input
             }
+        case 'ADD_COMMENT':
+            let posts = state.posts.map(post => {
+                if (post.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return post
+                }
+            })
+            return {...state, posts: posts}
 
-            
         default:
             return state
 
