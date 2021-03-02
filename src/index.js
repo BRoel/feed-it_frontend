@@ -13,9 +13,9 @@ import App from './App';
 import Footer from './Footer';
 
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;  //grants access to Redux dev tools
 
-let store = createStore(postReducer, composeEnhancers(applyMiddleware(thunk)))
+let store = createStore(postReducer, composeEnhancers(applyMiddleware(thunk)))  //create store and pass in reducer, updates store
 
 ReactDOM.render(
   <Provider store={store}>
@@ -27,3 +27,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+//access to store through provider

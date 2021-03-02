@@ -1,5 +1,4 @@
 import React from 'react'
-import {Redirect} from 'react-router-dom'
 import {Card} from 'react-bootstrap';
 import CommentsContainer from '../containers/CommentsContainer';
 

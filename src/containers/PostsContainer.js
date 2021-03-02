@@ -18,7 +18,6 @@ class PostsContainer extends React.Component {
             <div>
                 <NavBar/>
                 <header className="App-header">
-                
                     <Switch>
                         <Route path='/posts/new' component={PostForm}/>
                         <Route path='/posts/:id' render={(routerProps) => <Post {...routerProps} posts={this.props.posts}/>}/>

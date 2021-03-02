@@ -11,7 +11,7 @@ class CommentsContainer extends React.Component {
                 <CommentForm post={this.props.post}/>
                 <Comments comments={this.props.post && this.props.post.comments}/>
                 
-            </div>
+            </div> // passing Comments component a comments prop of actions associated with the post
         )
     }
 

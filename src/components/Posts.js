@@ -13,7 +13,7 @@ const Posts = (props) => {
                 <ul key={post.id}>
                     <Link to={`/posts/${post.id}`}>{post.title}</Link>
                 </ul>
-                //created link for each account using interpolation
+                //created link for each post using interpolation
             )}
         </div>
 
