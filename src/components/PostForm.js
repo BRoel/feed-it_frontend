@@ -33,7 +33,7 @@ class PostForm extends React.Component {
                     <input type='text' placeholder='Title' value={this.state.title} name="title" onChange={this.handleChange}/>
                     <br></br>
                     <label>Post Content: </label>
-                    <input type='text' placeholder='Content' value={this.state.body} name="body" onChange={this.handleChange}/>
+                    <textarea type='text' placeholder='Content' value={this.state.body} name="body" onChange={this.handleChange}/>
                     <input type="submit"/>
                 </form>
             </div>

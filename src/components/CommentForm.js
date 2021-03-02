@@ -7,7 +7,7 @@ class CommentForm extends React.Component {
     state = {
         content: ''
     }
-    //local state
+    //local initial state
     
     handleChange = (e) => { //update state
         this.setState({
@@ -28,7 +28,7 @@ class CommentForm extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Comment: </label>
-                    <input type='text' name='content' value={this.state.content} onChange={this.handleChange}/>
+                    <textarea type='text' name='content' value={this.state.content} onChange={this.handleChange}/>
                     <input type="submit"/>
                 </form>
             </div>
@@ -38,4 +38,4 @@ class CommentForm extends React.Component {
 }
 
 
-export default connect(null, {addComment})(CommentForm) //on invoke update store
+export default connect(null, {addComment})(CommentForm) //on invoke update store. connecting to addComment

@@ -8,8 +8,8 @@ const Comments = (props) => {
             {props.comments && props.comments.map(comment =>
                 
                 <ul key={comment.id}>
-                    {comment.content}
-                </ul>  //on itteration key needed
+                    {comment.content}   
+                </ul>  //Redering Comments
 
             )}
         </div>

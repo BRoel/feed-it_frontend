@@ -11,7 +11,7 @@ export default function postReducer(state = {posts: []}, action) {
             }
         case 'ADD_COMMENT':
             let posts = state.posts.map(post => {
-                if (post.id === action.payload.id) {  // replacing post with the post with the same id on submit
+                if (post.id === action.payload.id) {  // updating the posts array according to the post coming back from the API, replacing post with the post with the same id
                     return action.payload
                 } else {
                     return post
