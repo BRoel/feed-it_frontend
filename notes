@@ -14,3 +14,11 @@ numberOfLikes = () => {
         likes: currentNumber
     })
 }
+
+numberOfLikes = () => {
+    if (this.state.likes === 0)
+        this.setState({ likes: 1 }
+    else 
+        this.setState({ likes: 0 })
+    }
+}
