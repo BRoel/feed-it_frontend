@@ -4,10 +4,12 @@ class LikeToggle extends React.Component {
     
     state = {
         likes: 0,
+        toggle: false
     };
 
+
     addLike = () => {
-        let newLikes = this.state.likes =+ 1;
+        let newLikes = this.state.likes +1;
 
         this.setState({
           likes: newLikes
