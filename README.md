@@ -2,6 +2,9 @@
 
 Feed-it is a Reddit feed clone used to create posts and comment on those posts. Uses a Rails API and JS React-Redux frontend. To get this application running please follow this readme, along with the readme in the link below. https://github.com/BRoel/feed-it_backend
 
+##### Watch my demo on YouTube
+<a href= 'https://www.youtube.com/watch?v=XlyqpubZrHY' rel="nofollow"><img src= "https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
+
 # Installation
 
 Fork and Clone this Repository
