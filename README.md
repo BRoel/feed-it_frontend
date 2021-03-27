@@ -8,6 +8,7 @@ Feed-it is a Reddit feed clone used to create posts and comment on those posts. 
 # Future Implementations
 
 Adding User Model, secure login, ownership over posts and comments.
+Add Tests
 
 # Installation
 
