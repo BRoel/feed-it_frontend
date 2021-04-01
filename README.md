@@ -22,7 +22,7 @@ $ cd feed-it_frontend
 ```
 Run npm install
 ```
-$ npm intall
+$ npm install
 ```
 Boot-up your local environment
 ```
