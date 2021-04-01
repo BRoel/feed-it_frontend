@@ -20,6 +20,10 @@ Navigate to feed-it_frontend
 ```
 $ cd feed-it_frontend
 ```
+Run npm install
+```
+$ npm install
+```
 Boot-up your local environment
 ```
 Enter "npm start" into your terminal
