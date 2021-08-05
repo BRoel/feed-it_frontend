@@ -1,6 +1,5 @@
 import React from 'react';
 import PostsContainer from './containers/PostsContainer'
-import './App.css';
 
 class App extends React.Component {
 

@@ -8,9 +8,9 @@ import {BrowserRouter as Router} from 'react-router-dom'
 
 
 import './index.css';
-import Header from "./Header";
 import App from './App';
 import Footer from './Footer';
+import NavBar from './components/NavBar';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;  //grants access to Redux dev tools
@@ -19,11 +19,11 @@ let store = createStore(postReducer, composeEnhancers(applyMiddleware(thunk)))  
 
 ReactDOM.render(
   <Provider store={store}>
-    <Header />
     <Router>
+      <NavBar/>
       <App />
+      <Footer />
     </Router>
-    <Footer />
   </Provider>,
   document.getElementById('root')
 );

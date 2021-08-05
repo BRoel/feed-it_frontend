@@ -9,10 +9,12 @@ const Posts = (props) => {
     
     return (
 
-        <div>
+        <div class='body'>
             {props.posts.map(post =>  //interating over all posts
                 <ul key={post.id}>
-                    <Link to={`/posts/${post.id}`}>{post.title}</Link> <LikeToggle/>
+                    <li>
+                        <Link class='link' to={`/posts/${post.id}`}>{post.title}</Link> <LikeToggle/>
+                    </li>
                 </ul>
                 //created link for each post using interpolation
             )}
