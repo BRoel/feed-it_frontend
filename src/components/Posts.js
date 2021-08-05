@@ -12,7 +12,7 @@ const Posts = (props) => {
         <div class='body'>
             {props.posts.map(post =>  //interating over all posts
                 <ul key={post.id}>
-                    <li>
+                    <li class='post' id='all-post'>
                         <Link class='link' to={`/posts/${post.id}`}>{post.title}</Link> <LikeToggle/>
                     </li>
                 </ul>

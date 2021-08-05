@@ -4,12 +4,12 @@ const Comments = (props) => {
 
     return (
 
-        <div>
+        <div class='comment'>
             {props.comments && props.comments.map(comment =>
                 
                 <ul key={comment.id}>
-                    {comment.content}   
-                </ul>  //Redering Comments
+                    <li>{comment.content}</li> 
+                </ul> //Redering Comments
 
             )}
         </div>
