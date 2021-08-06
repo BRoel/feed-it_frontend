@@ -26,10 +26,10 @@ class CommentForm extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Comment: </label>
-                    <textarea type='text' name='content' value={this.state.content} onChange={this.handleChange}/>
-                    <input type="submit"/>
+                <form className="forms" onSubmit={this.handleSubmit}>
+                    <label><i class="far fa-comment-dots"></i>Comment: </label>
+                    <textarea  type='text' name='content' value={this.state.content} onChange={this.handleChange}/>
+                    <button className='button' type="submit">Submit</button>
                 </form>
             </div>
         )

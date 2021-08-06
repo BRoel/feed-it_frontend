@@ -28,13 +28,16 @@ class PostForm extends React.Component {
     render() {
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form className='post' onSubmit={this.handleSubmit}>
                     <label>Post Title: </label>
                     <input type='text' placeholder='Title' value={this.state.title} name="title" onChange={this.handleChange}/>
                     <br></br>
+                    <input type="file" name="file" id="file" class="inputfile" />
+                    <label for="file">Upload Photo</label>
+                    <br></br>
                     <label>Post Content: </label>
                     <textarea type='text' placeholder='Content' value={this.state.body} name="body" onChange={this.handleChange}/>
-                    <input type="submit"/>
+                    <button className='button' type="submit">Submit</button>
                 </form>
             </div>
         )

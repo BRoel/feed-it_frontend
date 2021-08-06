@@ -7,9 +7,11 @@ const Post = (props) => {
 
     return (
         <div class='post'>
-            
-            <h1>{post ? post.title : null}</h1>
-            <p>{post ? post.body : null}</p>
+            <div className='post-content'>
+                <h1>{post ? post.title : null}</h1>
+                <p>{post ? post.body : null}</p>
+            </div>
+            <hr></hr>
             <CommentsContainer post={post}/>
         
         </div>

@@ -68,10 +68,6 @@
     transition: all 0.2s ease-out;
   }
     
-  .fa-bars {
-    color: #fff;
-  }
-    
   .nav-links-mobile {
     display: none;
   }
@@ -138,6 +134,15 @@
     .fa-times {
       color: #fff;
       font-size: 2rem;
+    }
+    .fa-times:hover {
+        color: #9b1c2c;
+    }
+    .fa-bars {
+        color: #fff;
+    }
+    .fa-bars:hover {
+        color: #9b1c2c;
     }
   
     .nav-links-mobile {
