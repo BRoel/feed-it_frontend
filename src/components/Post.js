@@ -9,6 +9,7 @@ const Post = (props) => {
         <div class='post'>
             <div className='post-content'>
                 <h1>{post ? post.title : null}</h1>
+                <img src={post ? post.image : null} alt=''/>
                 <p>{post ? post.body : null}</p>
             </div>
             <hr></hr>
