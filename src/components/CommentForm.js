@@ -17,7 +17,7 @@ class CommentForm extends React.Component {
 
     handleSubmit = (e) => { //on form submit state sent to addComment action
         e.preventDefault()
-        this.props.addComment(this.state, this.props.post.id) //dispatch to reducer
+        this.props.addComment(this.state, this.props.post.id)
         this.setState({
             content: '' //clears form after submit
         })

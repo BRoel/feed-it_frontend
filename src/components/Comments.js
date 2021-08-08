@@ -7,9 +7,9 @@ const Comments = (props) => {
         <div class='comment'>
             {props.comments && props.comments.map(comment =>
                 
-                <ul key={comment.id}>
-                    <li>{comment.content}</li> 
-                </ul> //Redering Comments
+                <div key={comment.id}>
+                    <p>{comment.content}</p> 
+                </div> //Redering Comments
 
             )}
         </div>

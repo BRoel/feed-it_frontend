@@ -13,15 +13,6 @@ class LikeToggle extends React.Component {
         else 
             this.setState({ likes: 0 })
     }
-    
-
-    // addLike = () => {
-    //     let newLikes = this.state.likes +1;
-
-    //     this.setState({
-    //       likes: newLikes
-    //     })
-    // };
 
     render() {
         return <button onClick={this.numberOfLikes}> Like {this.state.likes}</button>
