@@ -11,6 +11,7 @@ import './index.css';
 import App from './App';
 import Footer from './Footer';
 import NavBar from './components/NavBar';
+import ScrollToTop from './components/ScrollToTop';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;  //grants access to Redux dev tools
@@ -20,6 +21,7 @@ let store = createStore(postReducer, composeEnhancers(applyMiddleware(thunk)))  
 ReactDOM.render(
   <Provider store={store}>
     <Router>
+      <ScrollToTop/>
       <NavBar/>
       <App />
       <Footer />

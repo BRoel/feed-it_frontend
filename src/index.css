@@ -46,7 +46,9 @@
 }
 
 .post-image {
-  width: 400px;
+  margin: auto;
+  max-width: 400px;
+  min-width: 100px;
 }
 
 #all-post {
@@ -163,4 +165,8 @@ label {
   bottom: 0;
   text-align: center;
   min-height: 5vh;
+}
+
+@media screen and (max-width: 420){
+  
 }

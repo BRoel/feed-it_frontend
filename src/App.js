@@ -6,9 +6,9 @@ class App extends React.Component {
   render() {
     return (
       <div id='container'>
-      <div id="content-wrap">
-        <PostsContainer />
-      </div>
+        <div id="content-wrap">
+          <PostsContainer />
+        </div>
       </div>
     );
   }
