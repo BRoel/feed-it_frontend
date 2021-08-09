@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addPost} from '../actions/addPost'
 
+
 class PostForm extends React.Component {
 
     state = {
@@ -10,6 +11,7 @@ class PostForm extends React.Component {
         body: ''
     }
     //local state
+    
 
     handleChange = (e) => { //update state
 
@@ -27,21 +29,22 @@ class PostForm extends React.Component {
             image: '', //clears form after submit
             body: ''
         })
+        this.props.history.push('/posts')
     }
 
     render() {
         return(
             <div>
                 <form className='post' onSubmit={this.handleSubmit}>
-                    <label>Post Title: </label>
+                    <label>Post Title:<strong className='require'> required*</strong></label>
                     <input type='text' placeholder='Title' value={this.state.title} name="title" onChange={this.handleChange} required/>
                     <br></br>
                     <label>Post Photo URL:</label>
                     <input type="text" name="image" value={this.state.image} onChange={this.handleChange} />
                     <br></br>
-                    <label>Post Content: </label>
+                    <label>Post Content:<strong className='require'> required*</strong></label>
                     <textarea type='text' placeholder='Content' value={this.state.body} name="body" onChange={this.handleChange} required/>
-                    <button className='button' type="submit">Submit</button>
+                    <button className='button' type="submit">Submit Post</button>
                 </form>
             </div>
         )

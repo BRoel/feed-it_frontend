@@ -1,4 +1,9 @@
-export default function postReducer(state = {posts: []}, action) {
+export default function postReducer(
+    state = {
+        posts: []
+    }, 
+    action
+    ) {
 
     switch (action.type) {
         case 'FETCH_POSTS':
@@ -7,7 +12,13 @@ export default function postReducer(state = {posts: []}, action) {
             } //return new version of state from fetch request
         case 'ADD_POST':
             return {
-                ...state, posts: [...state.posts, action.payload] // posts point to array with all other existing posts along with new input
+                ...state, 
+                posts: [...state.posts, action.payload] // posts point to array with all other existing posts along with new input
+            }
+        case 'DELETE_POST':
+            return {
+                ...state,
+                posts: state.posts.filter(post => post !== action.payload)
             }
         case 'ADD_COMMENT':
             let posts = state.posts.map(post => {

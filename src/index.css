@@ -149,6 +149,11 @@ label {
   border: 5px inset rgb(197, 195, 195);
 }
 
+.require{
+  display: inline;
+  color: red;
+}
+
 #footer {
   background-color: rgb(56, 56, 56);
   box-sizing: border-box;

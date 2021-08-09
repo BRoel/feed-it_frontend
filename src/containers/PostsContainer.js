@@ -17,9 +17,9 @@ class PostsContainer extends React.Component {
             <div>
                 <div>
                     <Switch>
-                        <Route path='/posts/new' component={PostForm}/>
-                        <Route path='/posts/:id' render={(routerProps) => <Post {...routerProps} posts={this.props.posts}/>}/>
-                        <Route path='/posts' render={(routerProps) => <Posts {...routerProps} posts={this.props.posts}/>}/>
+                        <Route exact path='/posts/new' component={PostForm}/>
+                        <Route exact path='/posts/:id' render={(routerProps) => <Post {...routerProps} posts={this.props.posts}/>}/>
+                        <Route exact path='/posts' render={(routerProps) => <Posts {...routerProps} posts={this.props.posts}/>}/>
                     </Switch>
                 </div>
             </div>
@@ -32,6 +32,7 @@ const mapStateToProps = state => {
       posts: state.posts // posts can be accessed as props
     }
 }
+
 
 export default connect(mapStateToProps, {fetchPosts})(PostsContainer) 
 //mapStateToProps to get access to posts in store as props and send them to posts component

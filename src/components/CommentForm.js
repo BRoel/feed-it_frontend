@@ -29,7 +29,7 @@ class CommentForm extends React.Component {
                 <form className="forms" onSubmit={this.handleSubmit}>
                     <label><i class="far fa-comment-dots"></i>Comment: </label>
                     <textarea  type='text' name='content' value={this.state.content} onChange={this.handleChange} required/>
-                    <button className='button' type="submit">Submit</button>
+                    <button className='button' type="submit">Submit Comment</button>
                 </form>
             </div>
         )
