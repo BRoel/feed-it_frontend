@@ -7,7 +7,7 @@ export const addPost = (data) => {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      method: 'POST',  // fetch POST to API adds new post
+      method: 'POST',  // POST to API adds new post
       body: JSON.stringify(data)
     })
     .then(response => response.json())

@@ -6,10 +6,10 @@ const Posts = (props) => {
     
     return (
 
-        <div class='body'>
+        <div className='body'>
             {props.posts.map(post =>  //interating over all posts
            
-                <li key={post.id} class='post' id='all-post'>
+                <li key={post.id} className='post' id='all-post'>
                     <Link className='link' to={`/posts/${post.id}`}> {post.title} <br/> <img className='post-image' src={post.image} alt=''/></Link> <LikeToggle/>
                 </li>
              
