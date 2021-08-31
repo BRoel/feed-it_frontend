@@ -15,7 +15,19 @@ class LikeToggle extends React.Component {
     }
 
     render() {
-        return <button onClick={this.numberOfLikes}> Like {this.state.likes}</button>
+        return (
+            <div className='like-container'>
+                
+                <div className='like-text'>
+                    <p>{this.state.likes} people have liked this post</p>
+                </div>
+                
+                <div className='like-button'>
+                    <img  src='images/thumbs-up.svg' onClick={this.numberOfLikes} alt=''/>
+                </div>
+               
+            </div>
+        );
     }
     
 }
