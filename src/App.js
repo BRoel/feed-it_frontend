@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PostsContainer from './containers/PostsContainer'
 
 class App extends React.Component {
 
@@ -10,7 +10,7 @@ class App extends React.Component {
           <PostsContainer />
         </div>
       </div>
-    )
+    );
   }
 }
 

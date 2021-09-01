@@ -23,47 +23,45 @@
 
 .post {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   box-sizing: content-box;
   width: max-content;
-  max-width: 60%;
+  max-width: 50%;
+  min-width: 50%;
   transition: 0.3s;
   border-radius: 5px;
-  padding: 100px;
+  padding: 2.5%;
   margin-top: 20px;
   margin-bottom: 20px;
   word-wrap: break-word;
 }
 
 .post-content {
-  margin-bottom: 5vh;
-  font-size: 1.5rem;
-}
-
-.post-content h1, img, p {
-  padding: 25px;
+  padding: 20px;
 }
 
 .post-image {
-  margin: auto;
-  max-width: 400px;
-  min-width: 100px;
+  border-radius: 5px;
+  max-width: 100%;
 }
 
 #all-post {
-  min-width: 50%;
-  max-width: 50%;
+  font-size: 2rem;
+}
+
+#all-post:hover {
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
+  padding: 2.5%;
 }
 
 textarea {
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbDc1S7I87jE1h-jOScvTvMXHLmHkicfDE-Q&usqp=CAU) center center no-repeat; /* This ruins default border */
-  border: 1px solid #888;
-  min-height: 100px;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbDc1S7I87jE1h-jOScvTvMXHLmHkicfDE-Q&usqp=CAU) center center no-repeat;
+  background-size: 70%;
+  min-height: 80px;
   min-width: 300px;
   border-radius: 10px;
   resize: none;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
 }
 
 textarea:focus {
@@ -81,8 +79,8 @@ textarea:focus {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   box-sizing: content-box;
   border-radius: 5px;
-  max-width: 400px;
-  min-width: 200px;
+  max-width: 300px;
+  min-width: 100px;
   padding: 20px;
   margin: auto;
   word-wrap: break-word;
@@ -92,9 +90,9 @@ textarea:focus {
 .button {
   transition-duration: 0.4s;
   padding: .5rem;
-  font-size: 1.2rem;
-  background-color: transparent;
-  border-radius: 50px;
+  font-size: 1rem;
+  background-color: rgb(155, 155, 155);
+  border-radius: 5px;
 }
 
 .button:hover {
@@ -156,6 +154,30 @@ label {
   color: red;
 }
 
+.like-container {
+  border: 1px solid red;
+}
+
+.like-text {
+  width: 70%;
+  margin-inline-start: 10%;
+  float: left;
+  font-size: 1rem;
+  border: 1px solid red;
+}
+
+.like-button > img {
+  width: 20px;
+  margin-inline-end: 10%;
+  border: 1px solid red;
+}
+
+.like-button > img:hover {
+  width: 22px;
+  -webkit-filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, .2));
+  filter: drop-shadow( 1px 1px 1px rgba(0, 0, 0, .2));
+}
+
 #footer {
   background-color: rgb(56, 56, 56);
   box-sizing: border-box;
@@ -167,6 +189,75 @@ label {
   min-height: 5vh;
 }
 
-@media screen and (max-width: 420){
-  
+@media (max-width: 1024px){
+
+  #all-post {
+    font-size: 1.7rem;
+    min-width: 70%;
+  }
+
+  .post {
+    min-width: 70%;
+    font-size: 1.1rem;
+  }
+
+  .body li {
+    padding: 2.5%;
+  }
+
+  .like-text {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  #all-post {
+    font-size: 1.5rem;
+    min-width: 85%;
+  }
+
+  .post {
+    min-width: 85%;
+    font-size: 1rem;
+  }
+
+  textarea {
+    min-width: 200px;
+  }
+
+  .body li {
+    padding: 2.5%;
+  }
+
+  .like-text {
+    font-size: 1rem;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  #all-post {
+    font-size: 1.2rem;
+    min-width: 90%;
+  }
+
+  .post {
+    min-width: 90%;
+    font-size: .9rem;
+  }
+
+  textarea {
+    min-width: 100px;
+  }
+
+  .body li {
+    padding: 2.5%;
+  }
+
+  .like-text {
+    font-size: .8rem;
+  }
 }
