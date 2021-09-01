@@ -9,6 +9,7 @@ export default class Home extends React.Component{
     }
 
     handleSuccessfulAuth(data) {
+        this.props.handleLogin(data);
         this.props.history.push('/dashboard');
     }
 
@@ -16,7 +17,8 @@ export default class Home extends React.Component{
         return (
             <div>
                 <h1>Home</h1>
-                <Registration />
+                <h1>Status: {this.props.loggedInStatus}</h1>
+                <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
             </div>
         )
     }

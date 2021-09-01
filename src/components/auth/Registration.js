@@ -1,8 +1,9 @@
 import React from 'react';
-import {connect} from 'react-redux'
-import {addUser} from '../../actions/addUser'
+import axios from 'axios';
+// import {connect} from 'react-redux'
+// import {addUser} from '../../actions/addUser'
 
-class Registration extends React.Component{
+export default class Registration extends React.Component{
     constructor(props){
         super(props);
         
@@ -25,8 +26,9 @@ class Registration extends React.Component{
 
     handleSubmit(e) {
         console.log('form submitted');
-        e.preventDefault();
-        this.props.addUser({
+        axios
+            .post("http://localhost:3000/registrations",
+            {
             user: {
             email: this.state.email,
             password: this.state.password,
@@ -34,16 +36,16 @@ class Registration extends React.Component{
             }
         }, 
         { withCredentials: true }
+        )
         .then(response => {
             if (response.data.status === "created") {
               this.props.handleSuccessfulAuth(response.data);
             }
           })
-          .catch(error => {
+        .catch(error => {
             console.log("registration error", error);
-            })
-    
-        )
+        })
+        e.preventDefault();
         this.setState({
             email: '',
             password: '',
@@ -87,4 +89,4 @@ class Registration extends React.Component{
     }
 }
 
-export default connect(null, {addUser})(Registration)
+// export default connect(null, {addUser})(Registration)
