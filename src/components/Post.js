@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { Redirect } from 'react-router-dom';
 import { deletePost } from '../actions/deletePost';
 import CommentsContainer from '../containers/CommentsContainer';
 
@@ -10,27 +9,31 @@ const Post = (props) => {
     let post = props.posts.filter(post => post.id.toString() === props.match.params.id)[0]
     
     const handleDelete = () => { //on form submit state sent to addPost action
-       
-        props.deletePost(props.match.params.id)
-        props.history.push('/posts')
-        props.history.go(0)
+        if (window.confirm('Are you sure you want to delete this post?')) {
+            props.deletePost(props.match.params.id)
+            props.history.push('/posts')
+            props.history.go(0)
+        } else {
+            console.log('post was not deleted');
+        }
     }
 
     return (
-        <div className='post'>
-            <div className='post-content'>
+        <div className='body'>
+            <div className='post'>
+                  
                 {/* { post ? null :<Redirect to='/posts'/> } */}
-                <h1>{post ? post.title : null}</h1>
+                <h1 className='post-content' >{post ? post.title : null}</h1>
                 
                 <img className='post-image' src={post ? post.image : null} alt=''/>
                 <hr></hr>
-                <p>{post ? post.body : null}</p>
+                <p className='post-content' >{post ? post.body : null}</p>
                 <hr></hr>
-                <button type='delete' onClick={handleDelete}>Delete</button>
+                <button className='button' type='delete' onClick={handleDelete}>Delete</button>
+            
+                <CommentsContainer post={post}/>
+            
             </div>
-      
-            <CommentsContainer post={post}/>
-        
         </div>
         //if Post exists then render, otherwise null
     )
