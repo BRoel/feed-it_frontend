@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 // import { BrowserRouter, Switch, Route } from "react-router-dom";
 // import Dashboard from './components/Dashboard';
 // import Home from './components/Home';
@@ -62,10 +63,16 @@ class App extends React.Component {
   //     user: data.user
   //   });
   // }
+=======
+import PostsContainer from './containers/PostsContainer'
+
+class App extends React.Component {
+>>>>>>> parent of 6b3c334... added Registration and addUser action with reducer. registration working
 
   render() {
     return (
       <div id='container'>
+<<<<<<< HEAD
         {/* <BrowserRouter>
           <Switch>
             <Route
@@ -93,6 +100,11 @@ class App extends React.Component {
             <PostsContainer />
           {/* </Switch>
         </BrowserRouter> */}
+=======
+        <div id="content-wrap">
+          <PostsContainer />
+        </div>
+>>>>>>> parent of 6b3c334... added Registration and addUser action with reducer. registration working
       </div>
     );
   }

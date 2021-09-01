@@ -6,10 +6,6 @@ export default function postReducer(
     ) {
 
     switch (action.type) {
-        case 'ADD_USER':
-            return {
-                ...state
-            }
         case 'FETCH_POSTS':
             return {
                 posts: action.payload
