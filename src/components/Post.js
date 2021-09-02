@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { Redirect } from 'react-router-dom';
 import { deletePost } from '../actions/deletePost';
 import CommentsContainer from '../containers/CommentsContainer';
 
@@ -18,19 +17,15 @@ const Post = (props) => {
 
     return (
         <div className='post'>
-            <div className='post-content'>
-                {/* { post ? null :<Redirect to='/posts'/> } */}
-                <h1>{post ? post.title : null}</h1>
-                
-                <img className='post-image' src={post ? post.image : null} alt=''/>
-                <hr></hr>
-                <p>{post ? post.body : null}</p>
-                <hr></hr>
-                <button type='delete' onClick={handleDelete}>Delete</button>
-            </div>
-      
+            <h2>{post ? post.title : null}</h2>
+            
+            <img className='post-image' src={post ? post.image : null} alt=''/>
+            <hr></hr>
+            <p>{post ? post.body : null}</p>
+            <hr></hr>
+            <button type='delete' onClick={handleDelete}>Delete</button>
+    
             <CommentsContainer post={post}/>
-        
         </div>
         //if Post exists then render, otherwise null
     )

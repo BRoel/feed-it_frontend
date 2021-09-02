@@ -12,7 +12,6 @@ const Posts = (props) => {
                 <li key={post.id} className='post' id='all-post'>
                     <Link className='link' to={`/posts/${post.id}`}> {post.title} <br/> <img className='post-image' src={post.image} alt=''/></Link> <LikeToggle/>
                 </li>
-             
                 //created link for each post using interpolation
             )}
         </div>
