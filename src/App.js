@@ -10,10 +10,10 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <ScrollToTop/>
+        <NavBar/>
         <div id='wrap'>
           <div id="main">
-            <ScrollToTop/>
-            <NavBar/>
             <PostsContainer/>
           </div>
         </div>

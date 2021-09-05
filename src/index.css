@@ -15,7 +15,7 @@ body {
 
 #main {
   overflow: auto;
-  padding-bottom: 180px;
+  padding-bottom: 5vh;
   /* must be same height as the footer */
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 #all-post:hover {
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 10px 12px 10px rgba(0,0,0,0.2);
   padding: 2.5%;
 }
 
@@ -197,7 +197,6 @@ label {
   color: white;
   position: fixed;
   bottom: 0;
-  left: 0;
   text-align: center;
   min-height: 5vh;
 }
