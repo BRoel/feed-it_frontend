@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import {Provider} from 'react-redux' //wraps app allowing access to the store throughout
 import postReducer from './reducers/postReducer'
 import {BrowserRouter as Router} from 'react-router-dom'
+import { Auth0Provider } from '@auth0/auth0-react';
 
 
 import './index.css';
@@ -20,12 +21,18 @@ let store = createStore(postReducer, composeEnhancers(applyMiddleware(thunk)))  
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
-      <ScrollToTop/>
-      <NavBar/>
-      <App />
-      <Footer />
-    </Router>
+    <Auth0Provider
+      domain='dev-brennan.us.auth0.com'
+      clientId='CpbTX3C0gqhR1l0TFJ4YoHq3eiBLBaYR'
+      redirectUri={window.location.origin}
+    >
+      <Router>
+        <ScrollToTop/>
+        <NavBar/>
+        <App />
+        <Footer />
+      </Router>
+    </Auth0Provider>
   </Provider>,
   document.getElementById('root')
 );

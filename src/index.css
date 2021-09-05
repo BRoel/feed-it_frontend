@@ -83,25 +83,28 @@ textarea:focus {
 }
 
 .button {
+  border: none;
   transition-duration: 0.4s;
   padding: .5rem;
   font-size: 1rem;
-  background-color: rgb(155, 155, 155);
+  background-color: rgb(206, 206, 206);
   border-radius: 5px;
+  box-shadow: 0 2px 4px 0 #000000;
 }
 
 .button:hover {
-  background-color: #000000; /* Green */
-  color: white;
+  background-color: rgb(168, 168, 168);
   cursor: pointer;
 }
 
 .comment-button {
   border: none;
   background: none;
+  color: #5c5c5c;
 }
 .comment-button:hover {
   cursor: pointer;
+  color: #000000;
 }
 
 input, label, button {
