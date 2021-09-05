@@ -8,10 +8,11 @@ class LikeToggle extends React.Component {
     };
 
     numberOfLikes = () => {
-        if (this.state.likes === 0)
+        if (this.state.likes === 0) {
             this.setState({ likes: 1 })
-        else 
+        } else {
             this.setState({ likes: 0 })
+        }
     }
 
     render() {

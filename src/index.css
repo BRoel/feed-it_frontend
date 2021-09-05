@@ -96,6 +96,14 @@ textarea:focus {
   cursor: pointer;
 }
 
+.comment-button {
+  border: none;
+  background: none;
+}
+.comment-button:hover {
+  cursor: pointer;
+}
+
 input, label, button {
   display:block;
 }
@@ -203,7 +211,6 @@ label {
   .like-text {
     font-size: 1rem;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -229,7 +236,6 @@ label {
   .like-text {
     font-size: 1rem;
   }
-
 }
 
 
