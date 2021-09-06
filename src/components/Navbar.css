@@ -39,7 +39,7 @@
   grid-gap: 10px;
   list-style: none;
   text-align: center;
-  width: 80vw;
+  width: 60vw;
   justify-content: end;
   margin-right: 2rem;
 }
@@ -76,8 +76,7 @@
   .nav-menu {
     display: flex;
     flex-direction: column;
-    width: 95%;
-    height: 90vh;
+    height: 85vh;
     position: absolute;
     top: 80px;
     left: -100%;
@@ -87,6 +86,7 @@
 
   .nav-menu.active {
     background: rgb(56, 56, 56);
+    width: 89%;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;

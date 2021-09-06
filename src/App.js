@@ -9,7 +9,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <div>
         <ScrollToTop/>
         <NavBar/>
         <div id='wrap'>
@@ -18,7 +18,7 @@ class App extends React.Component {
           </div>
         </div>
         <Footer/>
-      </>
+      </div>
     );
   }
 }
