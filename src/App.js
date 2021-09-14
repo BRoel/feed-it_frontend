@@ -6,7 +6,9 @@ import ScrollToTop from './components/ScrollToTop';
 import PostsContainer from './containers/PostsContainer'
 import Footer from './Footer';
 import { useAuth0 } from '@auth0/auth0-react';
+import { Route } from 'react-router-dom'
 import './index.css';
+import Profile from './components/Auth0/Profile';
 
 function App() {
 
@@ -19,6 +21,7 @@ function App() {
       <div id='wrap'>
         <div id="main">
           <h3>User is { isAuthenticated ? "Logged In" : "Logged Out"}</h3>
+          <Route exact path='/profile' component={Profile}/>
           <LoginButton/>
           <LogoutButton/>
           <PostsContainer/>

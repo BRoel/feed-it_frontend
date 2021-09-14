@@ -35,6 +35,11 @@ function NavBar() {
                             <Link to='/posts/new' className='nav-links' onClick={closeMobileMenu}>
                                 Add Post
                             </Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to='/profile' className='nav-links' onClick={closeMobileMenu}>
+                                <i class="far fa-user-circle"></i>
+                            </Link>
                         </li> 
                     </ul>
                 </div>
