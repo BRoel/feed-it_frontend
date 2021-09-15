@@ -12,7 +12,18 @@ import Profile from './components/Auth0/Profile';
 
 function App() {
 
-  const { isAuthenticated } = useAuth0();
+  const {
+    isLoading,
+    isAuthenticated,
+    error,
+    user,
+    loginWithRedirect,
+    logout,
+  } = useAuth0();
+
+  debugger;
+
+
 
   return (
     <div>

@@ -38,7 +38,7 @@ function NavBar() {
                         </li>
                         <li className='nav-item'>
                             <Link to='/profile' className='nav-links' onClick={closeMobileMenu}>
-                                <i class="far fa-user-circle"></i>
+                                <i className='far fa-user-circle'></i>
                             </Link>
                         </li> 
                     </ul>
