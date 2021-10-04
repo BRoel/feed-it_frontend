@@ -36,6 +36,7 @@ const Post = (props) => {
             <br></br>
             <p>{post ? post.body : null}</p>
             <p>{post ? post.user_id : null}</p>
+            <p>{post ? `Post by: ${post.nickname}` : null}</p>
             <br></br>
             <hr></hr>
             <br></br>

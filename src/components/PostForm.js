@@ -33,6 +33,7 @@ class PostForm extends React.Component {
         const { user } = this.props.auth0;
         const postWithUser = Object.assign({}, this.state)
         postWithUser.user_id = user.sub
+        postWithUser.nickname = user.nickname
         this.props.addPost(postWithUser)
 
         this.setState(this.getInitialState())

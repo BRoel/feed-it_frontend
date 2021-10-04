@@ -25,7 +25,7 @@ function App() {
     logout,
   } = useAuth0();
 
-  debugger;
+  // debugger;
 
 
 
