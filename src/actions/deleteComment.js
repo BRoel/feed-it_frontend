@@ -4,7 +4,7 @@ export const deleteComment = (commentId, postId) => {
       
         fetch(`http://localhost:3000/api/v1/posts/${postId}/comments/${commentId}`, {
        
-            method: 'Delete',
+            method: 'DELETE',
         })
         .then(response => response.json())
         .then(comment => {dispatch({type: 'DELETE_COMMENT', payload: comment})}) //sent entire post back with changes

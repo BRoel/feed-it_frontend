@@ -6,6 +6,7 @@ export const addPost = (data) => {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
+        //extract header for auth0
       },
       method: 'POST',  // POST to API adds new post
       body: JSON.stringify(data)

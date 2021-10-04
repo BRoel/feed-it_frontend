@@ -5,6 +5,7 @@ import Posts from '../components/Posts';
 import PostForm from '../components/PostForm';
 import Post from '../components/Post';
 import {Route, Switch} from 'react-router-dom'
+import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
 
 class PostsContainer extends React.Component {
 

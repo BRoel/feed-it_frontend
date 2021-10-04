@@ -2,9 +2,9 @@ import React from "react";
 
 function Footer() {
     return (
-        <div id='footer'>
+        <footer>
             <h2>Flatiron Final Project</h2>
-        </div>
+        </footer>
     );
 }
 

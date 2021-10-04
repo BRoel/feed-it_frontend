@@ -35,6 +35,7 @@ const Post = (props) => {
             <hr></hr>
             <br></br>
             <p>{post ? post.body : null}</p>
+            <p>{post ? post.user_id : null}</p>
             <br></br>
             <hr></hr>
             <br></br>

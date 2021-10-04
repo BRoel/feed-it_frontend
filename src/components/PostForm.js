@@ -1,17 +1,24 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addPost} from '../actions/addPost'
-
+import {getId} from '../helpers/authHelpers'
+import { withAuth0 } from '@auth0/auth0-react';
 
 class PostForm extends React.Component {
-
-    state = {
-        title: '',
-        image: '',
-        body: ''
+    constructor() {
+        super()
+        this.state = this.getInitialState()
     }
-    //local state
-    
+
+    getInitialState(){
+        return(
+            { 
+                title: '',
+                image: '',
+                body: '',
+            }
+        );
+    }
 
     handleChange = (e) => { //update state
 
@@ -23,12 +30,12 @@ class PostForm extends React.Component {
 
     handleSubmit = (e) => { //on form submit state sent to addPost action
         e.preventDefault()
-        this.props.addPost(this.state)
-        this.setState({
-            title: '',
-            image: '', //clears form after submit
-            body: ''
-        })
+        const { user } = this.props.auth0;
+        const postWithUser = Object.assign({}, this.state)
+        postWithUser.user_id = user.sub
+        this.props.addPost(postWithUser)
+
+        this.setState(this.getInitialState())
         this.props.history.push('/posts')
     }
 
@@ -52,5 +59,4 @@ class PostForm extends React.Component {
 
 }
 
-
-export default connect(null, {addPost})(PostForm) //allows for a call to this.props.addPost
+export default connect(null, {addPost})(withAuth0(PostForm)) //allows for a call to this.props.addPost

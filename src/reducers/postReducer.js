@@ -27,6 +27,7 @@ export default function postReducer(
                 } else {
                     return post
                 }
+                
             })
             return {...state, posts: posts}
 
