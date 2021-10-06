@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import LikeToggle from './LikeToggle'
+// import LikeToggle from './LikeToggle'
 
 const Posts = (props) => {
     
@@ -15,7 +15,7 @@ const Posts = (props) => {
                         <br/> 
                         {post.title} 
                     </Link>
-                    <LikeToggle/>
+                    {/* <LikeToggle/> */}
                 </li>
                 //created link for each post using interpolation
             )}

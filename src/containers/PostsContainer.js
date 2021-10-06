@@ -6,6 +6,7 @@ import PostForm from '../components/PostForm';
 import Post from '../components/Post';
 import {Route, Switch} from 'react-router-dom'
 import { Auth0Provider, withAuthenticationRequired } from '@auth0/auth0-react';
+import PrivateRoute from '../components/Auth0/PrivateRoute';
 
 class PostsContainer extends React.Component {
 
@@ -18,7 +19,7 @@ class PostsContainer extends React.Component {
             <div>
                 <div>
                     <Switch>
-                        <Route exact path='/posts/new' component={PostForm}/>
+                        <PrivateRoute path='/posts/new' component={PostForm}/>
                         <Route exact path='/posts/:id' render={(routerProps) => <Post {...routerProps} posts={this.props.posts}/>}/>
                         <Route exact path='/posts' render={(routerProps) => <Posts {...routerProps} posts={this.props.posts}/>}/>
                     </Switch>

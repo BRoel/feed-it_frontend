@@ -12,6 +12,7 @@ import Profile from './components/Auth0/Profile';
 import { Redirect } from 'react-router';
 import { render } from '@testing-library/react';
 import Registration from './components/Auth0/Registration';
+import PrivateRoute from './components/Auth0/PrivateRoute';
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
     logout,
   } = useAuth0();
 
-  // debugger;
+  debugger;
 
 
 
@@ -36,9 +37,9 @@ function App() {
       <div id='wrap'>
         <div id="main">
           <h3>User is { isAuthenticated ? "Logged In" : "Logged Out" }</h3>
-          {/* <>{isAuthenticated ? <render to="/posts" /> : <Redirect to="/registration" /> }</> */}
+          {/* {!isAuthenticated ? <Redirect to="/registration" /> : <render to="/posts" /> } */}
           <Route exact path='/registration' component={Registration}/>
-          <Route exact path='/profile' component={Profile}/>
+          <PrivateRoute path='/profile' component={Profile}/>
           <LoginButton/>
           <LogoutButton/>
           <PostsContainer/>

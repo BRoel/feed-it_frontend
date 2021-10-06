@@ -1,15 +1,10 @@
 import React from 'react';
+import { Route } from "react-router-dom";
 import { withAuthenticationRequired } from '@auth0/auth0-react';
 
-const PrivateRoute = () => {
-
-    return (
-        <div>
-
-        </div>
-    );
-}
-export default withAuthenticationRequired(PrivateRoute, {
-  // Show a message while the user waits to be redirected to the login page.
-  onRedirecting: () => <div>Redirecting you to the login page...</div>,
-});
+const PrivateRoute = ({component, ...args}) => (
+  <Route
+    component={withAuthenticationRequired(component, {onRedirecting: () => <div>Redirecting you to the login page...</div>,})} {...args}
+  />
+);
+export default PrivateRoute
