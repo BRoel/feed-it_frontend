@@ -37,8 +37,8 @@ function App() {
       <div id='wrap'>
         <div id="main">
           <h3>User is { isAuthenticated ? "Logged In" : "Logged Out" }</h3>
-          {/* {!isAuthenticated ? <Redirect to="/registration" /> : <render to="/posts" /> } */}
-          <Route exact path='/registration' component={Registration}/>
+          {isAuthenticated ? <Redirect to="/posts" /> : null }
+          <Route exact path='/' component={Registration}/>
           <PrivateRoute path='/profile' component={Profile}/>
           <LoginButton/>
           <LogoutButton/>

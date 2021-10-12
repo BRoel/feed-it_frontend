@@ -20,17 +20,57 @@ class PostForm extends React.Component {
         );
     }
 
-    handleChange = (e) => { //update state
 
-        this.setState({
-            [e.target.name]: e.target.value
-        })
+    // useEffect(() => {
+    //     const getUserMetadata = async () => {
+    //       const domain = "salute-vets.us.auth0.com";
+      
+    //       try {
+    //         const accessToken = await getAccessTokenSilently({
+    //           audience: `https://${domain}/api/v2/`,
+    //           scope: "read:current_user",
+    //         });
+      
+    //         const userDetailsByIdUrl = `https://${domain}/api/v2/users/${user.sub}`;
+      
+    //         const metadataResponse = await fetch(userDetailsByIdUrl, {
+    //           headers: {
+    //             Authorization: `Bearer ${accessToken}`,
+    //           },
+    //         });
+      
+    //         const { user_metadata } = await metadataResponse.json();
+      
+    //         setUserMetadata(user_metadata);
+    //       } catch (e) {
+    //         console.log(e.message);
+    //       }
+    //     };
+      
+    //     getUserMetadata();
+    //   }, [getAccessTokenSilently, user?.sub]);
+
+    // handleChange = (e) => { //update state
+
+    //     this.setState({
+    //         [e.target.name]: e.target.value
+    //     })
         
+    // }
+
+    componentDidMount() {
+
     }
+
+    
 
     handleSubmit = (e) => { //on form submit state sent to addPost action
         e.preventDefault()
-        const { user } = this.props.auth0;
+        const { user, isAuthenticated, getAccessTokenSilently } = this.props.auth0;
+        // in order to get access token I must call getAccessTokenSilently.
+        // also the example I sent is using react hooks so I cannot do it the way shown unless I switch this to a functional component setup.  The hook setup is commented out above.
+        // may need to conver to a componentDidMount setup so on mount I can assess if they are authenticated and grab their access token.
+
         const postWithUser = Object.assign({}, this.state)
         postWithUser.user_id = user.sub
         postWithUser.nickname = user.nickname

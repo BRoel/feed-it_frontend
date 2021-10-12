@@ -16,9 +16,11 @@ let store = createStore(postReducer, composeEnhancers(applyMiddleware(thunk)))  
 ReactDOM.render(
   <Provider store={store}>
     <Auth0Provider
-      domain='dev-brennan.us.auth0.com'
-      clientId='CpbTX3C0gqhR1l0TFJ4YoHq3eiBLBaYR'
+      domain='salute-vets.us.auth0.com'
+      clientId='eWmuyXmXcLjOvU7SSmDYpVV9rwcxS8Of'
       redirectUri={window.location.origin}
+      audience="https://salute-vets.us.auth0.com/api/v2/"
+      scope="read:current_user update:current_user_metadata"
     >
       <Router>
         <App />
