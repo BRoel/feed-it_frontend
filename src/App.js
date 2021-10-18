@@ -26,10 +26,6 @@ function App() {
     logout,
   } = useAuth0();
 
-  debugger;
-
-
-
   return (
     <div>
       <ScrollToTop/>

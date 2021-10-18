@@ -20,49 +20,13 @@ class PostForm extends React.Component {
         );
     }
 
+    handleChange = (e) => { //update state
 
-    // useEffect(() => {
-    //     const getUserMetadata = async () => {
-    //       const domain = "salute-vets.us.auth0.com";
-      
-    //       try {
-    //         const accessToken = await getAccessTokenSilently({
-    //           audience: `https://${domain}/api/v2/`,
-    //           scope: "read:current_user",
-    //         });
-      
-    //         const userDetailsByIdUrl = `https://${domain}/api/v2/users/${user.sub}`;
-      
-    //         const metadataResponse = await fetch(userDetailsByIdUrl, {
-    //           headers: {
-    //             Authorization: `Bearer ${accessToken}`,
-    //           },
-    //         });
-      
-    //         const { user_metadata } = await metadataResponse.json();
-      
-    //         setUserMetadata(user_metadata);
-    //       } catch (e) {
-    //         console.log(e.message);
-    //       }
-    //     };
-      
-    //     getUserMetadata();
-    //   }, [getAccessTokenSilently, user?.sub]);
-
-    // handleChange = (e) => { //update state
-
-    //     this.setState({
-    //         [e.target.name]: e.target.value
-    //     })
+        this.setState({
+            [e.target.name]: e.target.value
+        })
         
-    // }
-
-    componentDidMount() {
-
     }
-
-    
 
     handleSubmit = (e) => { //on form submit state sent to addPost action
         e.preventDefault()
